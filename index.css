@@ -102,20 +102,55 @@
     transform: translate(0px, -8px);
   }
   
+  
   .card-img-top {
     height: 310px;
   }
   
-  section {
+  /* section.row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    gap: 1.1rem;
-    align-items: center;
-    margin-top: 2rem;
-    padding: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    section.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: 1200px;
+}
+
+  } */
+ 
+  /* section.row {
     display: flex;
-    justify-content: space-between;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+  } */
+
+  section.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin: 6rem auto 2rem; /* Add top margin without affecting width */
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+.spacer {
+  height: 30px; /* Adjust to match navbar height */
+}
+
   
   .card-body {
     text-align: center;
@@ -200,11 +235,13 @@
     width: 300px;
     height: 300px;
   }
-  .logo-instgram {
+  /* .logo-instgram {
     width: 50px;
+    
   }
   .acount {
     margin-top: 20px;
+    align-items: center;
   }
   .all {
     margin-top: 20px;
@@ -214,7 +251,28 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-  }
+  } */
+
+  .all {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-instgram img {
+    height: 50px; /* Adjust based on your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.acount {
+    display: flex;
+    align-items: center; /* Ensures text is aligned with the middle of the logo */
+}
+
   
   .row::after {
     content: "";
@@ -312,8 +370,14 @@
     .card {
       /* width: 300px; */
       /* margin: auto; */
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
+       flex: 1 1 280px; /* Minimum width 280px, adjusts on larger screens */
+       max-width: 320px; /* Prevents cards from getting too wide */
+       align-self: flex-start;
     }
+
+   
+  
   
     .about-us {
       width: 100%;
