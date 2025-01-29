@@ -19,6 +19,7 @@ body {
     background-color: #dad5d5;
     color: var(--text-color);
     font-family: Arial, sans-serif;
+    padding-top: 80px;
 }
 
 /* General Resets */
